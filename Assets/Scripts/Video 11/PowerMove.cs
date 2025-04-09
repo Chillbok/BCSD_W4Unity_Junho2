@@ -18,7 +18,6 @@ public class PowerMove : MonoBehaviour
     {
         //rigid.linearVelocity = new Vector3(2,4,-1);
         //#2. 힘을 가하기
-        /*
         if(Input.GetButtonDown("Jump"))
         {
             rigid.AddForce(
@@ -29,16 +28,15 @@ public class PowerMove : MonoBehaviour
         }
 
         Vector3 vec = new Vector3(
-            Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Horizontal") * 2,
             0,
-            Input.GetAxisRaw("Vertical")
+            Input.GetAxisRaw("Vertical") * 2
             );
 
         rigid.AddForce(vec, ForceMode.Impulse);
-        */
 
         //#3. 회전력
-        rigid.AddTorque(Vector3.up);
+        //rigid.AddTorque(Vector3.up);
     }
 
     void Update()
